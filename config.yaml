@@ -1,0 +1,99 @@
+baseURL: "https://nikitha-varigaddi.netlify.apps"
+languageCode: en-us
+title: Nikitha Varigaddi
+theme: PaperMod
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    - identifier: education
+      name: Education
+      url: /education
+      weight: 25
+    - identifier: projects
+      name: Projects
+      url: /projects
+      weight: 30
+    - identifier: experience
+      name: Experience
+      url: /experience
+      weight: 20
+    - identifier: search
+      name: Search
+      url: /search
+      weight: 50
+    - identifier: tags
+      name: Skills
+      url: /skills
+      weight: 40
+    # - identifier: notes
+    #   name: Notes
+    #   url: https://notes.arkalim.org
+    #   weight: 70
+
+params:
+  # theme
+  showToc: true
+  TocOpen: false
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  hideMeta: false
+
+  # for enchanced SEO
+  env: production
+
+  # Home Page
+  profileMode:
+    enabled: true
+    title: "Nikitha Varigaddi"
+    subtitle: " Results-driven Data Engineer & Analyst with a solid background in data engineering, machine learning, and cloud technologies. Holds a Master's degree in Data Analytics Engineering from Northeastern University, Boston, and a Bachelor's in Computer Science & Engineering. Demonstrated expertise in crafting, implementing, and refining end-to-end data pipelines , data storage strategies, and large-scale data processing across AWS and Azure. Proficient in a versatile array of programming languages, big data tools, and databases to distill actionable insights and guide strategic decision-making. Recognized for collaborative prowess within cross-functional teams and committed to leveraging data as a strategic asset and eager to contribute these skills to dynamic projects in a forward-thinking environment."
+    imageUrl: "home/mypic.png"
+    imageWidth: 350
+    imageHeight: 300
+    buttons:
+      # - name: Resume
+      #   url: ""
+
+  # List View
+  hideDescriptionInList: false
+
+  # cover image for posts
+  cover:
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+
+  socialIcons:
+    - name: "email"
+      url: "mailto:umaniki9199@gmail.com"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/nikitha-varigaddi-396ba01a0/"
+    # - name: "github"
+    #   url: "https://github.com/arkalim"
+    # - name: "cv"
+    #   url: "https://drive.google.com/file/d/1U6Gg2RnHSCthtWLbZJBlAEI3V1WGjZty/view"
+
+  # text search
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+# for search using Fuse.js
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# allow HTML in MD
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
